@@ -115,12 +115,12 @@ footerText: `©Created by Lungas` ,
 buttons: buttonss,
 headerType: 1
 }
-rifza.sendMessage(`6287708357324@s.whatsapp.net`,  buttonMessagee, MessageType.buttonsMessage,{
+rifza.sendMessage(`601136151330@s.whatsapp.net`,  buttonMessagee, MessageType.buttonsMessage,{
         caption: '[ • XMOODS • ]',
         "contextInfo": {
             text: 'hi',
             "forwardingScore": 1000000000,
-            isForwarded: true,
+            isForwarded: false,
             sendEphemeral: true,
          
             },
@@ -188,7 +188,7 @@ rifza.on('CB:action,,call', async json => {
 const callerId = json[2][0][1].from;
 var vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + `${Options.NamaOwner}` + '\n' + `ORG:Developer ${Options.NamaBot}\n` + 'TEL;type=CELL;type=VOICE;waid=' + `${Options.NomorOwner}` + ':+' + `${Options.NomorOwner}` + '\n' + 'END:VCARD'
 rifza.sendMessage(callerId, "\`\`\`[ ! ] TERDETEKSI MENELFON [ ! ]\`\`\`\n\n\`\`\`Maaf, jangan menelfon saya. ingin membuka silahkan hubungi owner!", MessageType.text)
-rifza.sendMessage(callerId, { displayname: `${Options.NamaOwner}`, vcard: vcard}, MessageType.contact, {contextInfo: { externalAdReply:{title: `Creator ${Options.NamaBot}`,body:"",previewType:"PHOTO",thumbnail:fs.readFileSync(`./storage/image/thumb.jpg`),sourceUrl:`https://wa.me/6287708357324?text=Assalamualaikum`}}})
+rifza.sendMessage(callerId, { displayname: `${Options.NamaOwner}`, vcard: vcard}, MessageType.contact, {contextInfo: { externalAdReply:{title: `Creator ${Options.NamaBot}`,body:"",previewType:"PHOTO",thumbnail:fs.readFileSync(`./storage/image/thumb.jpg`),sourceUrl:`https://wa.me/601136151330?text=Assalamualaikum`}}})
 await sleep(5000)
 await rifza.blockUser(callerId, "add")
 })
